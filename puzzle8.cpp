@@ -12,7 +12,7 @@
 
 using namespace std;
 
-// Auxiliary function for calculating powers in O(log(n))
+// Auxiliary function for calculating int powers in O(log(n))
 int power(int a, int b){
 	int ret = 1;
 	while(b > 0){
