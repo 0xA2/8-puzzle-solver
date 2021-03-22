@@ -29,7 +29,7 @@ class board{
 
 
 	// Current state of the board
-	int	state;
+	int state;
 
 	// Index of the empty position
 	int index;
