@@ -12,7 +12,7 @@
 
 using namespace std;
 
-// Auxiliary function for calculating int powers in O(log(n))
+// Auxiliary function for calculating powers in O(log(n))
 int power(int a, int b){
 	int ret = 1;
 	while(b > 0){
@@ -29,7 +29,7 @@ class board{
 
 
 	// Current state of the board
-	int state;
+	int	state;
 
 	// Index of the empty position
 	int index;
@@ -518,33 +518,36 @@ int main(){
 	cout << "5) Solve with A*" << endl;
 	cout << "0) Quit" << endl;
 	cout << "> ";
-	int op = 0; readOption(&op);
-	switch(op){
-		case 1:
-			b -> dfsSolve(987654321);
-			break;
+	int op = 0;
+	if(readOption(&op)){
+		switch(op){
+			case 1:
+				b -> dfsSolve(987654321);
+				break;
 
-		case 2:
-			b -> bfsSolve(987654321);
-			break;
+			case 2:
+				b -> bfsSolve(987654321);
+				break;
 
-		case 3:
-			b -> uniformCostSearchSolve(987654321);
-			break;
+			case 3:
+				b -> uniformCostSearchSolve(987654321);
+				break;
 
-		case 4:
-			b -> greedyBestFirstSolve(987654321);
-			break;
+			case 4:
+				b -> greedyBestFirstSolve(987654321);
+				break;
 
-		case 5:
-			b -> aStarSolve(987654321);
-			break;
+			case 5:
+				b -> aStarSolve(987654321);
+				break;
 
-		case 0:
-			exit(0);
+			case 0:
+				exit(0);
 
-		default:
-			puts("Invalid Option");
+			default:
+				puts("Invalid Option");
+		}
 	}
+	else{puts("Invalid Option");}
 	return 0;
 }
